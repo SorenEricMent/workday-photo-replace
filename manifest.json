@@ -1,0 +1,25 @@
+{
+    // Comments are accepted in the manifest, even though it is JSON.
+    "manifest_version": 3,
+    "name": "Workday Photo Replace",
+    "description": "Replace your legacy profile photo",
+    "version": "0.0.1",
+    "icons": {
+        "16": "logo/logo16.png",
+        "48": "logo/logo48.png",
+        "128": "logo/logo128.png"
+    },
+    "options_page": "settings/settings.html",
+    "action": {
+        "default_title": "placeholder",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [{
+        "js": ["foreground.js"],
+        "matches": ["https://wd10.myworkday.com/ubc/*"]
+    }]
+}
